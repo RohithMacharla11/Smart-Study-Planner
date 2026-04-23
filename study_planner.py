@@ -85,6 +85,20 @@ def delete_task():
     except:
         messagebox.showwarning("Error", "Select a task to delete")
 
+# deadline check
+def check_deadlines():
+    today = datetime.now()
+    overdue_tasks = []
+
+    for task in tasks:
+        if task["deadline"] < today and task["status"] == "Pending":
+            overdue_tasks.append(task["subject"])
+
+    if overdue_tasks:
+        messagebox.showwarning(
+            "Deadline Alert",
+            "Overdue Tasks:\n" + "\n".join(overdue_tasks)
+        )
 
 def clear_fields():
     subject_entry.delete(0, tk.END)
@@ -93,6 +107,7 @@ def clear_fields():
 
 # GUI
 root = tk.Tk()
+root.after(1000, check_deadlines)
 root.title("Smart Study Planner")
 root.geometry("650x450")
 
