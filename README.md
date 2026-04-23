@@ -37,7 +37,7 @@ The application also includes a **deadline alert system** that notifies users ab
 ## 🖥️ Application Screenshots
 
 ### Main Interface
-![Main UI](https://github.com/RohithMacharla11/Smart-Study-Planner/blob/main/Study_Planner_GUI.png)
+![Main UI](https://github.com/RohithMacharla11/Smart-Study-Planner/blob/main/study_planner.py)
 
 ---
 
